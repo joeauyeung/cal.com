@@ -7,6 +7,7 @@ export const createEventTypeInput = _EventTypeModel
         description: true,
         length: true,
         teamId: true,
+        hidden: true,
         schedulingType: true,
     })
     .refine((data) => (data.teamId ? data.teamId && data.schedulingType : true), {
